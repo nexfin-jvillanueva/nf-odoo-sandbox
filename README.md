@@ -25,3 +25,8 @@ $ cat ~/.ssh/id_ed25519.pub
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPCmcWG3SD3QPNynmxKZngZuaR+Kb5oUw08UfEFj6zEi jvillanueva@nexfinitsolutions.com
 Add to GitHub!
+
+Then try cloning again
+
+Make directory for the custom module:
+$ mkdir RE-module
