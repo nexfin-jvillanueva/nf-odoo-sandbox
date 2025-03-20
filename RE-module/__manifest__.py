@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "my_module",
+    'name': "Real Estate Management",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -10,7 +10,7 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "NexFin Solutions Inc",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -32,4 +32,21 @@
     'demo': [
         'demo/demo.xml',
     ],
+}
+
+{
+    'name': 'Real Estate Management',
+    'version': '1.0',
+    'summary': 'A custom module created for testing purposes only.',
+    'author': 'NF-jvillanueva',
+    'email': 'jvillanueva@nexfinitsolutions.com',
+    'category': 'Custom',
+    'license': 'LGPL-3',
+    'depends': ['base'],
+    'data': [
+        'views/views.xml',
+        'views/templates.xml',
+    ],
+    'installable': True,
+    'application': True,
 }
