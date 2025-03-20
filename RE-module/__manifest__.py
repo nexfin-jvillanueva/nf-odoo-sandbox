@@ -1,4 +1,5 @@
-# -*- coding: utf-8 
+# -*- coding: utf-8 -*-
+'''
 {
     'name': "Real Estate Management",
 
@@ -33,7 +34,9 @@
         'demo/demo.xml',
     ],
 }
--*-
+'''
+
+
 {
     'name': 'Real Estate Management',
     'version': '1.0',
