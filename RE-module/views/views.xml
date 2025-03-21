@@ -1,6 +1,66 @@
 <odoo>
   <data>
+   <!-- Tree View for Listing Properties -->
+    <record id="view_estate_property_tree" model="ir.ui.view">
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Properties">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="price"/>
+                <field name="location"/>
+                <field name="property_type"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
 
+    <!-- Form View for Creating/Editing Properties -->
+    <record id="view_estate_property_form" model="ir.ui.view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="price"/>
+                        <field name="location"/>
+                        <field name="property_type"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View for Searching Properties -->
+    <record id="view_estate_property_search" model="ir.ui.view">
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Search Properties">
+                <field name="name"/>
+                <field name="location"/>
+                <filter string="Available" name="filter_available" domain="[('status', '=', 'available')]"/>
+                <filter string="Sold" name="filter_sold" domain="[('status', '=', 'sold')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action to open the list of properties -->
+    <record id="action_estate_property" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_estate_property_tree"/>
+        <field name="search_view_id" ref="view_estate_property_search"/>
+    </record>
+
+    <!-- Menu Item for the Properties -->
+    <menuitem id="estate_property_menu" name="Properties" parent="base.menu_custom" action="action_estate_property"/>
 
     
   </data>
